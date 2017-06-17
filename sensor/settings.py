@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'firstapp',
+    'sensorWorker',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +61,7 @@ CHANNEL_LAYERS = {
          "CONFIG": {
             "hosts": [("redis-10148.c14.us-east-1-2.ec2.cloud.redislabs.com", 10148)],
         },
-        "ROUTING": "chat_test.routing.channel_routing",
+        "ROUTING": "firstapp.routing.channel_routing",
     },
 }
 TEMPLATES = [

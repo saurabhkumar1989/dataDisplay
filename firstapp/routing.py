@@ -1,4 +1,4 @@
-from sensor.consumers import ws_message, ws_connect, ws_disconnect
+from sensor.consumers import ws_connect, ws_message, ws_disconnect
 
 channel_routing = {
     'websocket.connect': ws_connect,
