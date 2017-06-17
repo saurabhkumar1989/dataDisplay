@@ -1,3 +1,5 @@
+# only reason to create this is to integrate everthing with django command , even this can be done without this, directly run below 
+# program
 from channels import Group
 from django.core.management import BaseCommand
 import time

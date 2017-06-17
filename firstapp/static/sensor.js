@@ -10,7 +10,8 @@ $(function() {
 
     };
     // Below one will send the data to the server
-    chatsock.send("Here's some text that the server is urgently awaiting!");
+    // will work only when connected so wait for the connection
+    // chatsock.send("Here's some text that the server is urgently awaiting!");
 
     chatsock.onmessage = function(message) {
       // when message arrive
