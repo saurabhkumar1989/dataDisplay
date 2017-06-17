@@ -1,4 +1,5 @@
 # In consumers.py
+# consumer function is mapped from url file , in routing
 from channels import Group
 
 # Connected to websocket.connect

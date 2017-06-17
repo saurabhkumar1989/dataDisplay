@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # chanels is for cross communication
     'channels',
+    # working app
     'firstapp',
+    # application that send data to the channels
     'sensorWorker',
 ]
 
@@ -54,7 +57,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'sensor.urls'
 
-# In settings.py
+# channesl layer setting for Redis database hosted on redis lab
 CHANNEL_LAYERS = {
     "default": {
          "BACKEND": "asgi_redis.RedisChannelLayer",
