@@ -16,6 +16,7 @@ $(function() {
     chatsock.onmessage = function(message) {
       // when message arrive
         $('#sensor').text(message.data);
+        console.log(message.data);
     };
 
 });

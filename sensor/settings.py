@@ -58,13 +58,23 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'sensor.urls'
 
 # channesl layer setting for Redis database hosted on redis lab
+# CHANNEL_LAYERS = {
+#     "default": {
+#          "BACKEND": "asgi_redis.RedisChannelLayer",
+#          "CONFIG": {
+#             "hosts": [("redis-10148.c14.us-east-1-2.ec2.cloud.redislabs.com", 10148)],
+#         },
+#         "ROUTING": "firstapp.routing.channel_routing",
+#     },
+# }
+
 CHANNEL_LAYERS = {
     "default": {
-         "BACKEND": "asgi_redis.RedisChannelLayer",
-         "CONFIG": {
-            "hosts": [("redis-10148.c14.us-east-1-2.ec2.cloud.redislabs.com", 10148)],
-        },
+        "BACKEND": "asgi_rabbitmq.RabbitmqChannelLayer",
         "ROUTING": "firstapp.routing.channel_routing",
+        "CONFIG": {
+            "url": "amqp://kgmcrbkn:JEWBpwC2KUnSahYN680d9lkpqr8eh62o@fish.rmq.cloudamqp.com/kgmcrbkn",
+        },
     },
 }
 TEMPLATES = [
