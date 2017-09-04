@@ -11,7 +11,6 @@ def add(x, y):
 def mul(x, y):
     return x * y
 
-
 @app.task
 def xsum(numbers):
     return sum(numbers)
